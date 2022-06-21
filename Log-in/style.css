@@ -1,0 +1,88 @@
+@font-face {
+    font-family: AristaL;
+    src: url(./Fuentes/Arista-Pro-Light-trial.ttf);
+}
+
+@font-face {
+    font-family: AristaB;
+    src: url(./Fuentes/Arista-Pro-Alternate-Bold-trial.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+:root {
+    --color1: #906f99;
+    --color2: #a88db2;
+    --color3: #e7dbe9;
+    --color4: #fffcfd;
+    --color5: #fefefa;
+    
+    --colorA: #c5c6b9;
+    --colorB: #dcddd2;
+    --colorC: #fafcf3;
+}
+
+body {
+    background-image: url(./Fondo.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.log {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color1);
+    box-shadow: 0px -1px 37px 15px rgba(168,141,178,0.54);
+    opacity: 0.9;
+}
+.logo img {
+    width: 250px;
+    border-radius: 150px;
+    margin: 10px;   
+}
+
+input{
+    width: 250px;
+    height: 40px;
+    background-color: var(--color5);
+    border: none;
+    border-radius: 5px;
+    font-family: AristaL;
+    font-size: 18px;
+    padding: 5px;
+    outline: none;
+}
+
+input::placeholder {
+    font-family: AristaL;
+    font-size: 18px;
+    padding: 5px;
+    color: var(--color1);
+    text-align: center;
+}
+
+button {
+    width: 250px;
+    height: 40px;
+    background-color: var(--color2);
+    font-family: AristaB;
+    color: var(--color3);
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+

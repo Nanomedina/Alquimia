@@ -1,0 +1,293 @@
+@font-face {
+    font-family: AristaL;
+    src: url(./Fuentes/Arista-Pro-Light-trial.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+:root {
+    --color1: #906f99;
+    --color2: #a88db2;
+    --color3: #e7dbe9;
+    --color4: #fffcfd;
+    --color5: #fefefa;
+
+    --colorA: #c5c6b9;
+    --colorB: #dcddd2;
+    --colorC: #fafcf3;
+}
+
+body {
+    /* background-color: var(--colorB)  */
+    background-image: url(./FOndo1.jpg);
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 150px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e7dfd5;
+}
+
+.imagen{
+    width: 30%;
+}
+
+.logo {
+    width: 125px;
+    border-radius: 100px;
+    margin: 10px;
+}
+
+.toggle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+    font-size: 30px;
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+label {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color1);
+    height: 40px;
+    font-family: "AristaL", sans-serif;
+}
+
+a:hover {
+    /* font-size: 32px;
+    background-color: var(--color4);
+    color: var(--color1); */
+    /* border-radius: 10px; */
+    text-decoration: underline;
+    transition: all 0.8s ;
+    /* padding: 4px; */
+}
+
+.log {
+    width: 200px;
+    height: 40px;
+}
+
+button{
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: var(--colorA);
+    border: none;
+}
+
+button:hover {
+    background-color: var(--color3);
+    /* border: double; */
+    box-shadow: 1px -1px 25px 2px rgba(144,111,153,0.75) inset;
+}
+.log a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color1);
+    height: 30px;
+    font-family: "AristaL", sans-serif;
+    font-size: 30px;
+}
+
+.hero{
+    display: flex;
+    padding-top: 10px;
+}
+.slogan {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+    .slogan h2 {
+        font-size: 80px;
+        text-align: center;
+        color: var(--color1);
+        font-family: "AristaL", sans-serif;
+    }
+.img-presentacion {
+    width: 50%;
+    height: 485px;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-family: "AristaL", sans-serif;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--color1);
+    font-size: 40px;
+}
+
+p {
+    font-family: "AristaL", sans-serif;
+    color: var(--color1);
+    font-size: 25px;
+    margin: 30px;
+    text-align:justify;
+}
+
+
+.prep {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    flex-wrap: nowrap;
+}
+
+.prep-ind {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.prep-ind1 {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.prep img {
+    height: 30rem;
+    margin: 5px;
+}
+
+footer {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+footer a {
+    display: block;
+    margin: 15px;
+    font-size: 3rem;
+}
+
+@media (max-width: 1300px) {
+
+    .toggle {
+        display: none;
+    }
+
+    label{
+        display: block;
+        order:2;
+        font-size: 3rem;
+        color: var(--color1);
+
+    }
+
+    .menu-toggle:checked + .toggle {
+        display: block;
+    }
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .toggle {
+        padding: 10px;
+
+        height: 80%;
+    }
+}
+
+@media (max-width: 1025px) {
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slogan {
+        width: 80%;
+    }
+    .img-presentacion {
+    display: none;
+    }
+}
+
+@media (max-width: 768px) {
+  .slogan h2 {
+    font-size: 60px;
+    height: 50vh;
+    margin-top: 150px;
+  }
+
+  .prep-ind {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prep-ind1 {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .prep img {
+    height: 20rem;
+    width: 60%;
+    margin: 5px;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+button{
+    height: 30px;
+    width: 110px;
+    border-radius: 5px;
+    margin-left: 10px   ;
+}
+
+.toggle{
+    font-size: 20px;
+}
+}
